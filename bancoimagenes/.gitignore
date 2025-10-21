@@ -31,4 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
 .metadata/
+application.yml
+*.log
+*.class
+*.jar
+*.war
