@@ -80,11 +80,15 @@
               }
             ],
             "styles": [
+               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "8d2fc735-1d24-4024-99dd-009da5f5f758"
   }
 }
