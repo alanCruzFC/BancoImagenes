@@ -41,19 +41,3 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
-
-# Angular build
-/.angular/cache/
-
-# Testing
-/coverage/
-
-# Environment
-.env
-.env.*
-
-# Logs and secrets
-*.log
-*.key
-*.pem
-*.crt
