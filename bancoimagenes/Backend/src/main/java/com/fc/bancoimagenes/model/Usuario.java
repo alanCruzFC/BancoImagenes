@@ -26,6 +26,8 @@ public class Usuario {
     @ManyToOne
     private Equipo equipo;
 
+    
+    
 	public Long getId() {
 		return id;
 	}
