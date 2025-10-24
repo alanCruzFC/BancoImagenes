@@ -1,5 +1,5 @@
 package com.fc.bancoimagenes.model;
 
-public class Imagen {
+public class TipoArchivo {
 
 }

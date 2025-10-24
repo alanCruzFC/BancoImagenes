@@ -1,5 +1,10 @@
-import { CanActivateFn } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { CanActivate } from '@angular/router';
 
-export const AuthGuard: CanActivateFn = (route, state) => {
-  return true;
-};
+@Injectable({ providedIn: 'root' })
+export class AuthGuard implements CanActivate {
+  canActivate(): boolean {
+    // validar token
+    return !!localStorage.getItem('token');
+  }
+}

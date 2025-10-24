@@ -2,13 +2,13 @@ package com.fc.bancoimagenes.repository;
 
 import java.util.Optional;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import com.fc.bancoimagenes.model.Usuario;
 
-public class UsuarioRepository {
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
-	public Optional<Usuario> findByCorreo(String correo) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
+	public Optional<Usuario> findByCorreo(String correo);
 
 }
