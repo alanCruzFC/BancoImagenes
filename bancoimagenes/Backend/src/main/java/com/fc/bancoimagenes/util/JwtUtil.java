@@ -17,7 +17,6 @@ public class JwtUtil {
     @Value("${jwt.expiration}")
     private long expiration;
 
-    @SuppressWarnings("deprecation")
 	public String generateToken(Usuario usuario) {
         return Jwts.builder()
                 .setSubject(usuario.getCorreo())
@@ -30,7 +29,6 @@ public class JwtUtil {
                 .compact();
     }
 
-	@SuppressWarnings("deprecation")
 	public boolean validateToken(String token) {
         try {
             Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
@@ -40,7 +38,6 @@ public class JwtUtil {
         }
     }
 
-	@SuppressWarnings("deprecation")
 	public Claims getClaims(String token) {
         return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
     }

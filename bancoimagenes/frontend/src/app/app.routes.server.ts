@@ -1,30 +1,10 @@
-import { Routes } from '@angular/router';
-import { LoginComponent } from './auth/login/login';
-import { UploadFormComponent } from './upload/upload-form/upload-form';
-import { ListadoComponent } from './galeria/listado/listado';
-import { UsuariosComponent } from './admin/usuarios/usuarios';
-import { AuthGuard } from './core/auth-guard';
-import { RoleGuard } from './core/role-guard';
+import { ServerRoute, RenderMode } from '@angular/ssr';
+import { routes } from './app.routes';
 
-export const serverRoutes : Routes = [
-  { path: 'login', component: LoginComponent },
-  {
-    path: 'upload',
-    component: UploadFormComponent,
-    canActivate: [AuthGuard, RoleGuard],
-    data: { roles: ['USUARIO', 'ADMIN'] }
-  },
-  {
-    path: 'galeria',
-    component: ListadoComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'admin',
-    component: UsuariosComponent,
-    canActivate: [AuthGuard, RoleGuard],
-    data: { roles: ['ADMIN'] }
-  },
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: '**', redirectTo: 'login' }
-];
+// Solo rutas con path definido
+export const serverRoutes: ServerRoute[] = routes
+  .filter((route): route is ServerRoute => typeof route.path === 'string')
+  .map(route => ({
+    ...route,
+    renderMode: RenderMode.Server
+  }));
