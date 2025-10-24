@@ -1,5 +1,5 @@
 package com.fc.bancoimagenes.controller;
 
-public class ImagenController {
+public class ArchivoController {
 
 }

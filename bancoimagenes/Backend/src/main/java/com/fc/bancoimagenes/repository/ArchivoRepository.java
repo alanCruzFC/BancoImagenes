@@ -1,5 +1,5 @@
 package com.fc.bancoimagenes.repository;
 
-public class ImagenRepository {
+public class ArchivoRepository {
 
 }

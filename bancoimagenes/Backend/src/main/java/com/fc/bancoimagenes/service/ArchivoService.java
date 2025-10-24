@@ -1,5 +1,5 @@
 package com.fc.bancoimagenes.service;
 
-public class ImagenService {
+public class ArchivoService {
 
 }

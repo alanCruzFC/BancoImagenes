@@ -1,5 +1,5 @@
 package com.fc.bancoimagenes.dto;
 
-public class ImagenDTO {
+public class ArchivoDTO {
 
 }
